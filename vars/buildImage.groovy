@@ -45,5 +45,7 @@ String call(Map config) {
     def size = packer_post.builds.artifact_id.size()
     def ami_info = packer_post.builds.artifact_id[size - 1]
     def (value1, value2) = "$ami_info".tokenize(':')
+    echo "++++++++"
+    echo value2
     return value2
 }
