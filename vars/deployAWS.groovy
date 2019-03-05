@@ -19,6 +19,7 @@
 def call(Map config) {
     def WSO2InstanceType = "WSO2InstanceType=${config.wso2InstanceType}"
     def KeyPairName = "KeyPairName=${config.keyPairName}"
+    println(KeyPairName)
     def CertificateName = "CertificateName=${config.certName}"
     def DBUsername = "DBUsername=${config.dbUsername}"
     def DBPassword = "DBPassword=${config.dbPassword}"
@@ -41,6 +42,7 @@ def call(Map config) {
                              JDKVersion,
                              AMIId]
                     , timeoutInMinutes: 30, pollInterval: 1000)
+            echo outputs
             return outputs."${config.testEndpoint}"
         }
     }

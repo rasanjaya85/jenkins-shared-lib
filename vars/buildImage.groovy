@@ -48,4 +48,7 @@ String call(Map config) {
     println("++++++++")
     println(value2)
     return value2
+
+    //jq -r '.last_run_uuid as $uuid | .builds[] | select(.packer_run_uuid == $uuid) | .artifact_id' data.json
+    //return $uuid
 }
