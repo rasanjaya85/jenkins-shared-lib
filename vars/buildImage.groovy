@@ -45,8 +45,7 @@ String call(Map config) {
     def size = packer_post.builds.artifact_id.size()
     def ami_info = packer_post.builds.artifact_id[size - 1]
     def (value1, value2) = "$ami_info".tokenize(':')
-    println("++++++++")
-    println(value2)
+    log.info value2
     return value2
 
     //jq -r '.last_run_uuid as $uuid | .builds[] | select(.packer_run_uuid == $uuid) | .artifact_id' data.json
