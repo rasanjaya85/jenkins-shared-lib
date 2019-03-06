@@ -37,7 +37,7 @@ class Constants {
         static final String BUILD_PACK = "Build the pack"
         static final String BUILD_IMAGE = "Build the immutable image"
         static final String DEPLOY_STAGING = "Deploy to Staging"
-//        static final String RUNNING_TESTS = "Running Tests"
+        static final String RUNNING_TESTS = "Running Tests"
 //        static final String DEPLOY_PRODUCTION = "Deploy to Production"
     }
     class Paths {
